@@ -2,9 +2,46 @@
 
 
 # Single Shot Object Detection in Keras
-UNDER CONSTUCTION 🚧
+UNDER CONSTUCTION 🚧 :construction_worker:
 
 This repository implements a single shot object detection framework in Keras.
+
+# Features
+- [x] Training
+- [x] Testing/Inference
+- [x] Custom Networks
+- [x] Custom Datasets
+- [ ] MAP Evaluation
+
+# Data Structure
+You can use your own data by creating it within the following structure. Also you need to modify the *app_params.py* file with your data specifics as shown in the other examples.
+
+```
+./
+└───data/
+│   │
+│   └───<dataset_name> (e.g. pets_2009)
+│       │   └───train_im/(Image source files in .jpg format for training)
+│   │   │    |    im (1).jpg
+│   │   │    |    im (2).jpg
+.
+.
+│   │   │    |    im (503).jpg
+│       │   └───train_ann/ (Bounding Box Annotation Files for training)
+│   │   │    |    im (1).xml
+│   │   │    |    im (2).xml
+.
+.
+│       │   └───val_im/(Image source files in .jpg format for validation)
+│   │   │    |    im (504).jpg
+│   │   │    |    im (505).jpg
+.
+.
+│   │   │    |    im (600).jpg
+│       │   └───val_ann/ (Bounding Box Annotation Files for validation)
+│   │   │    |    im (504).xml
+│   │   │    |    im (505).xml
+```
 
 # Dependencies
 
@@ -17,6 +54,21 @@ This repository implements a single shot object detection framework in Keras.
 | opencv-python |   |
 | imagaug |   |
 
+# How to run
+
+You run a training example as follows:
+```python
+python det_keraspipeline.py -m resnet -d pets_2009 -s cosine -o adam -e 200 -lr 0.001
+```
+| Argument Name | Description |
+| ------------- | ------------- |
+| -m, -model | 3.7  |
+| -d,-dataset | 2.0.0 |
+| -e,-epochs | Number of epochs for training |
+| -l,-lr | Initial learning rate |
+| -o,-optimizer | Select optimizer from [adam,sgd]  |
+| -s,-scheduler | Select scheduler from [none, cosine, fix (reduce by 10 every 100 epochs)] |
+| -w,-weights | Apply weights for imbalanced classes |
 
 ## Citation Information
 This repository implements improved models from the following papers:
