@@ -60,6 +60,7 @@ You run a training example as follows:
 ```python
 python det_keraspipeline.py -m resnet -d pets_2009 -s cosine -o adam -e 200 -lr 0.001
 ```
+
 | Argument Name | Description |
 | ------------- | ------------- |
 | -m, -model | Select backbone model from: [vgg,resnet,mobileV2,mobile,yolopeds,dronet,tinyyolov2] |
@@ -85,4 +86,4 @@ This repository implements improved models from the following papers:
 
 - Christos Kyrkou, “YOLOPeds: Efficient Single-Shot Pedestrian Detection for Smart Camera Applications”, IET Computer Vision, 2020, 14, (7), p. 417-425, DOI: 10.1049/iet-cvi.2019.0897 [paper📜 ](https://digital-library.theiet.org/content/journals/10.1049/iet-cvi.2019.0897)
 
-- Christos Kyrkou, George Plastiras, Stylianos Venieris, Theocharis Theocharides, Christos-Savvas Bouganis, "DroNet: Efficient convolutional neural network detector for real-time UAV applications," 2018 Design, Automation & Test in Europe Conference & Exhibition (DATE), Dresden, Germany, pp. 967-972, March 2018.  [paper📜 ](https://ieeexplore.ieee.org/document/8342149/) [official DroNet repo 💻 ](https://github.com/gplast/DroNet)
+- Christos Kyrkou, George Plastiras, Stylianos Venieris, Theocharis Theocharides, Christos-Savvas Bouganis, "DroNet: Efficient convolutional neural network detector for real-time UAV applications," 2018 Design, Automation & Test in Europe Conference & Exhibition (DATE), Dresden, Germany, pp. 967-972, March 2018.  [paper📜 ](https://ieeexplore.ieee.org/document/8342149/),  [official DroNet repo 💻 ](https://github.com/gplast/DroNet)
