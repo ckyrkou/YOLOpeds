@@ -62,8 +62,8 @@ python det_keraspipeline.py -m resnet -d pets_2009 -s cosine -o adam -e 200 -lr 
 ```
 | Argument Name | Description |
 | ------------- | ------------- |
-| -m, -model | 3.7  |
-| -d,-dataset | 2.0.0 |
+| -m, -model | Select backbone model from: [vgg,resnet,mobileV2,mobile,yolopeds,dronet,tinyyolov2 (without imagenet weights)] |
+| -d,-dataset | Select dataset to use from: [kangaroo,ennfudan,pets_2009,raccoon,air_cars] |
 | -e,-epochs | Number of epochs for training |
 | -l,-lr | Initial learning rate |
 | -o,-optimizer | Select optimizer from [adam,sgd]  |
