@@ -62,13 +62,23 @@ python det_keraspipeline.py -m resnet -d pets_2009 -s cosine -o adam -e 200 -lr 
 ```
 | Argument Name | Description |
 | ------------- | ------------- |
-| -m, -model | Select backbone model from: [vgg,resnet,mobileV2,mobile,yolopeds,dronet,tinyyolov2 (without imagenet weights)] |
+| -m, -model | Select backbone model from: [vgg,resnet,mobileV2,mobile,yolopeds,dronet,tinyyolov2] |
 | -d,-dataset | Select dataset to use from: [kangaroo,ennfudan,pets_2009,raccoon,air_cars] |
 | -e,-epochs | Number of epochs for training |
 | -l,-lr | Initial learning rate |
 | -o,-optimizer | Select optimizer from [adam,sgd]  |
 | -s,-scheduler | Select scheduler from [none, cosine, fix (reduce by 10 every 100 epochs)] |
 | -w,-weights | Apply weights for imbalanced classes |
+
+# Backbone Models
+
+- VGG16 (keras imagenet pretrained)
+- Resnet50 (keras imagenet pretrained)
+- MobileNetV2 (keras imagenet pretrained)
+- MobileNetV1 (keras imagenet pretrained)
+- YOLOpeds (custom)
+- Dronet (custom)
+- Tinyyolov2 (custom without imagenet weights)
 
 ## Citation Information
 This repository implements improved models from the following papers:
