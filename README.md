@@ -6,6 +6,17 @@ UNDER CONSTUCTION 🚧
 
 This repository implements a single shot object detection framework in Keras.
 
+# Dependencies
+
+| Name | Version (min) |
+| ------------- | ------------- |
+| Python | 3.7  |
+| Tensorflow | 2.0.0 |
+| Numpy |   |
+| Matplotlib |   |
+| opencv-python |   |
+| imagaug |   |
+
 
 ## Citation Information
 This repository implements improved models from the following papers:
