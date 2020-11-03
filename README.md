@@ -82,7 +82,8 @@ python det_keraspipeline.py -m resnet -d pets_2009 -s cosine -o adam -e 200 -lr 
 - Tinyyolov2 (custom without imagenet weights)
 
 The repository implements models of the following form:
-(/Figures/Example_Arch.png)
+
+<img src="./Figures/Example_Arch.png" width="512">
 
 ## Citation Information
 This repository implements improved models from the following papers:
