@@ -73,6 +73,11 @@ python det_keraspipeline.py -m resnet -d pets_2009 -s cosine -o adam -e 200 -lr 
 
 # Backbone Models
 
+The repository implements models of the following form:
+
+<img src="./Figures/Example_Arch.png" width="512">
+
+Any of the backbone models can be selected. In addition, the detection layer can be configured according to the application needs.
 - VGG16 (keras imagenet pretrained)
 - Resnet50 (keras imagenet pretrained)
 - MobileNetV2 (keras imagenet pretrained)
@@ -80,10 +85,7 @@ python det_keraspipeline.py -m resnet -d pets_2009 -s cosine -o adam -e 200 -lr 
 - YOLOpeds (custom)
 - Dronet (custom)
 - Tinyyolov2 (custom without imagenet weights)
-
-The repository implements models of the following form:
-
-<img src="./Figures/Example_Arch.png" width="512">
+- Any custom model that you want to create
 
 ## Citation Information
 This repository implements improved models from the following papers:
