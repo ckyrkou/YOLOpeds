@@ -58,7 +58,7 @@ You can use your own data by creating it within the following structure. Also yo
 
 You run a training example as follows:
 ```python
-python det_keraspipeline.py -m resnet -d pets_2009 -s cosine -o sgd -e 200 -lr 0.001
+python det_keraspipeline.py -m resnet -d pets_2009 -s cosine -o adam -e 200 -lr 0.001
 ```
 
 | Argument Name | Description |
