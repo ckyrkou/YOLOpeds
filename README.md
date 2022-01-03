@@ -49,10 +49,10 @@ You can use your own data by creating it within the following structure. Also yo
 | ------------- | ------------- |
 | Python | 3.7  |
 | Tensorflow | 2.0.0 |
-| Numpy |   |
-| Matplotlib |   |
-| opencv-python |   |
-| imagaug |   |
+| Numpy | 1.18.5  |
+| Matplotlib | 3.3.4  |
+| opencv-python | 4.5.1  |
+| imagaug | 0.4.0  |
 
 # How to run
 
