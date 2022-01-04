@@ -76,6 +76,8 @@ python det_keraspipeline.py -m resnet -d pets_2009 -s cosine -o adam -e 200 -lr 
 
 ![](./det_output/train_output_det.jpg)
 
+![](./det_output/train_output_det_cars.jpg)
+
 ![](./det_output/val_map_22-01-04-00-02-13_yolopeds_det_pets_2009.png)
 
 - Models (both the complete architecture and weights file) are saved in the <saved_models> folder. In addition, everry 100 epochs a checkpoint is saved.
