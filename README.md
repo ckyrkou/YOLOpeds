@@ -75,7 +75,8 @@ python det_keraspipeline.py -m resnet -d pets_2009 -s cosine -o adam -e 200 -lr 
 The training will output, live detection results for a random image per epoch, mAP and loss curves as shown below. All this are stored in the <det_output> folder:
 
 ![](./det_output/train_output_det.jpg)
-![](./det_output/val_map_22-01-04-09-56-11_yolopeds_det_pets_2009.png)
+
+![](./det_output/val_map_22-01-04-00-02-13_yolopeds_det_pets_2009.png)
 
 
 # Backbone Models
