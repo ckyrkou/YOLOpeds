@@ -42,7 +42,6 @@ import sys
 
 sys.path.append("..")
 from gen_utils import change_model
-from train_backbones import train_cifar10,load_cifar10,load_cifar10_w
 
 
 ki = initializers.he_normal()
@@ -396,7 +395,7 @@ def enc_nasmobile(params):
     return x, base_model.input
 
 
-def enc_yolopeds(params,CIFAR_TRAIN=False,name=''):
+def enc_yolopeds(params,name=''):
 
     input_shape = [params.NORM_H, params.NORM_W, 3]
     inp = Input(shape=input_shape)
@@ -441,8 +440,6 @@ def enc_yolopeds(params,CIFAR_TRAIN=False,name=''):
     cls = x
 
     custom_objects = {'Mish': Mish}
-    if(CIFAR_TRAIN):
-        train_cifar10(inp,cls,custom_objects,name)
 
     x = add_YOLO_Head(params, x, ks=1, stride=1,name="")
 
@@ -904,7 +901,7 @@ def enc_LBPDet(params):
     return x, inp, cls
 
 
-def enc_dronet(params,CIFAR_TRAIN=False,name=''):
+def enc_dronet(params,name=''):
     input_shape = [params.NORM_H, params.NORM_W, 3]
     inp = Input(shape=input_shape)
 
@@ -942,8 +939,6 @@ def enc_dronet(params,CIFAR_TRAIN=False,name=''):
     cls = x
 
     custom_objects = {'Mish': Mish}
-    if(CIFAR_TRAIN):
-        train_cifar10(inp,cls,custom_objects,name)
 
     x = add_YOLO_Head(params, x, ks=1, stride=1)
 
@@ -1058,7 +1053,7 @@ def MYMODEL(params, net_name='resnet'):
     inputs = Input(shape=input_shape)
 
     cls = None
-    CIFAR_LOAD=False
+
     if (net_name == 'resnet'):
         x, inp = enc_resnet(params)
 
@@ -1085,7 +1080,6 @@ def MYMODEL(params, net_name='resnet'):
 
     if (net_name == 'yolopeds'):
         x, inp, _ = enc_yolopeds(params,name=net_name)
-        CIFAR_LOAD=False
 
     if (net_name == 'LBP'):
         x, inp, _ = enc_LBPDet(params)
@@ -1098,7 +1092,6 @@ def MYMODEL(params, net_name='resnet'):
 
     if (net_name == 'dronet'):
         x, inp, _ = enc_dronet(params,name=net_name)
-        CIFAR_LOAD = False
 
     if (net_name == 'tinyyolov2'):
         x, inp, _ = enc_tinyyolov2(params)
@@ -1106,9 +1099,6 @@ def MYMODEL(params, net_name='resnet'):
 
     if (cls == None):
         m = Model(inputs=[inp], outputs=[x])
-
-        if (CIFAR_LOAD):
-            m = load_cifar10_w(m,net_name)
 
     else:
         cls = conv_block(cls, channels=params.CLASS, kernel_size=1, dropout_rate=0.25)
