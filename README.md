@@ -13,6 +13,7 @@ This repository implements a single shot object detection framework in Keras.
 - [x] Custom Networks
 - [x] Custom Datasets
 - [x] MAP Evaluation
+- [ ] Restore Training (Not fully implemented.)
 
 # Data Structure
 You can use your own data by creating it within the following structure. Also you need to modify the *app_params.py* file with your data specifics as shown in the other examples.
