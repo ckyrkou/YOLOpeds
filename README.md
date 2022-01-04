@@ -3,7 +3,6 @@
 </a>
 
 # Single Shot Object Detection in Tensorflow.Keras
-UNDER CONSTUCTION 🚧 :construction_worker:
 
 This repository implements a single shot object detection framework in Keras.
 
