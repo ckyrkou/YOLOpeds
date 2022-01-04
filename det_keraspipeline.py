@@ -80,7 +80,6 @@ resumeTraining = inargs.resumeTraining
 
 NO_OF_EPOCHS = inargs.epochs
 
-#root = '/3TBdisk/ckyrko01/'+app
 root = './data/'+app
 
 train_frame_path = root + '/train_im/'
