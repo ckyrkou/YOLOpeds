@@ -18,12 +18,11 @@ from tensorflow.keras.models import  load_model, save_model
 import numpy as np
 import os
 import random as rnd
-import larq as lq
 
 from gen_utils import *
 
 from detection.utils import *
-from detection.losses import yolo_loss,yolo_loss_v2,cls_loss,ssd_loss
+from detection.losses import yolo_loss_v2,cls_loss,ssd_loss
 from detection.metrics import mean_acc, cls_acc, err_acc, obj_acc, IoU, class_acc, comb_metric, no_obj_acc
 from detection.models import MYMODEL,get_preprocess_method, LBCconv, LBCconv1x1,CSLBCconv,HaarCconv,LBPact,Mish
 from detection.app_params import *
