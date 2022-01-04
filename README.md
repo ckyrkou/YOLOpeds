@@ -54,6 +54,7 @@ You can use your own data by creating it within the following structure. Also yo
 | Matplotlib | 3.3.4  |
 | opencv-python | 4.5.1  |
 | imagaug | 0.4.0  |
+| larq | 0.11.2 |
 
 # How to run
 
