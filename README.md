@@ -88,7 +88,7 @@ Any of the backbone models can be selected. In addition, the detection layer can
 - Tinyyolov2 (custom without imagenet weights)
 - Any custom model that you want to create
 
-! [](./Figures/Yq41mxWdNy.gif)
+![](./Figures/Yq41mxWdNy.gif)
 
 ## Citation Information
 This repository implements improved models from the following papers:
