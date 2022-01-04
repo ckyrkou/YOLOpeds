@@ -18,6 +18,7 @@ from tensorflow.keras.models import  load_model, save_model
 import numpy as np
 import os
 import random as rnd
+import larq as lq
 
 from gen_utils import *
 
@@ -121,7 +122,7 @@ else:
 
 
 if(params.DET_TYPE == 'YOLO'):
-    loss = yolo_loss_v2(params,weights,debug = False,iou_thresh = 0.6,class_loss = 'MSE',scale=1.0)
+    loss = yolo_loss_v2(params,weights,debug = False,iou_thresh = 0.6,class_loss = 'CE',scale=1.0)
 else:
     loss = ssd_loss(params)
 
